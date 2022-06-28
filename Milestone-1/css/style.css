@@ -23,6 +23,9 @@
   height: 100%;
   width: 100%;
 }
+img {
+  border-radius: 50%;
+}
 /* LEFT COL */
 .left-col {
   width: 30%;
@@ -39,24 +42,79 @@
   /* test */
   background-color: blanchedalmond;
 }
+.profile-info {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.profile-info * {
+  margin-right: 0.5rem;
+}
+.profile-info img {
+  width: 60px;
+}
+.settings-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+}
+.settings-bar div {
+  padding: 0 0.5rem;
+}
 .notification-options {
   height: 15%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  /* Test */
-  background-color: khaki;
+  align-items: center;
+  background-color: #8edafb;
+  padding: 0 0.5rem;
 }
-.search-bar {
+.notification-options div {
+  margin-right: 0.5rem;
+}
+.notification-options h4 {
+  text-decoration: underline;
+  color: #4f7484;
+}
+.bell-icon {
+  border-radius: 50%;
+  padding: 1rem;
+  color: #8edafb;
+  background-color: white;
+  font-size: 1.3rem;
+}
+.search-bar-container {
   height: 8%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* Test */
   background-color: darkcyan;
+}
+#search-bar {
+  width: 90%;
+  height: 60%;
+  outline: none;
+  border-style: hidden;
 }
 .contact-list {
   width: 100%;
   /* Test */
   background-color: coral;
+}
+.contact-line {
+  width: 100%;
+  display: flex;
+}
+.contact-line h3 {
+  margin-top: 0.3rem;
+}
+.contact-pic {
+  height: 70px;
+  margin: 0.5rem;
 }
 /* RIGHT COL */
 .right-col {
