@@ -18,3 +18,74 @@
   /* Test */
   background-color: cornflowerblue;
 }
+#app {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+/* LEFT COL */
+.left-col {
+  width: 30%;
+  height: 100%;
+  /* Test */
+  background-color: darkturquoise;
+}
+.user-bar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* test */
+  background-color: blanchedalmond;
+}
+.notification-options {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Test */
+  background-color: khaki;
+}
+.search-bar {
+  height: 8%;
+  width: 100%;
+  /* Test */
+  background-color: darkcyan;
+}
+.contact-list {
+  width: 100%;
+  /* Test */
+  background-color: coral;
+}
+/* RIGHT COL */
+.right-col {
+  width: 70%;
+  height: 100%;
+  /* Test */
+  background-color: gold;
+}
+.contact-info-bar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* test */
+  background-color: darkgrey;
+}
+.message-area {
+  height: 78%;
+  width: 100%;
+  background-image: url(../img/mine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text-area {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* Test */
+  background-color: lightgreen;
+}
