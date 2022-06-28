@@ -52,9 +52,9 @@
                     </div>
                     <!-- CONTACT LIST -->
                     <div class="contact-list">
-                      <div class="contact-line">
-                        <img class="contact-pic" src="../Milestone-1/img/avatar_1.jpg" alt="Foto Contatto">
-                        <h3>Michele</h3>
+                      <div v-for="(contact, index) in contacts" class="contact-line">
+                        <img class="contact-pic" :src="imageUrl(index)" :alt="imageName(index)">
+                        <h3>{{contact.name}}</h3>
                       </div>
                     </div>
 

@@ -87,4 +87,14 @@ var app = new Vue({
       },
     ],
   },
+  methods: {
+    imageUrl(index) {
+      const imgUrl = `../Milestone-1/img/avatar${this.contacts[index].avatar}.jpg`;
+      return imgUrl;
+    },
+    imageName(index) {
+      const imgName = `Foto contatto ${this.contacts[index].name}`;
+      return imgName;
+    },
+  },
 });
