@@ -26,6 +26,14 @@
 img {
   border-radius: 50%;
 }
+.received {
+  background-color: white;
+  justify-self: flex-start;
+}
+.sent {
+  background-color: lightgreen;
+  margin-left: auto;
+}
 /* LEFT COL */
 .left-col {
   width: 30%;
@@ -157,6 +165,17 @@ img {
   background-image: url(../img/mine.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+.message-line {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.message-bubble {
+  width: 35%;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 .text-area {
   height: 12%;
