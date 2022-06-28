@@ -51,8 +51,8 @@
                       <input type="text" id="search-bar" name="search-bar" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- CONTACT LIST -->
-                    <div class="contact-list">
-                      <div v-for="(contact, index) in contacts" class="contact-line">
+                    <div v-for="(contact, index) in contacts" class="contact-list">
+                      <div  class="contact-line">
                         <img class="contact-pic" :src="imageUrl(index)" :alt="imageName(index)">
                         <h3>{{contact.name}}</h3>
                       </div>
