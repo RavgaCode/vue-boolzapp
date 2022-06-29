@@ -99,7 +99,7 @@
                       <!-- Input message -->
                       <div class="input-text-container">
                         <label for="input-text-bar"></label>
-                        <input id="input-text-bar" type="text" placeholder="Scrivi un messaggio">
+                        <input v-model="newText" @keyup.enter="sendNewMessage()" id="input-text-bar" type="text" placeholder="Scrivi un messaggio">
                       </div>
                       <!-- Microphone img -->
                       <div class="microphone-img"><i class="fa-solid fa-microphone"></i></div>

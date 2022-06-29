@@ -2,6 +2,8 @@ var app = new Vue({
   el: "#app",
   data: {
     currentActiveElement: 0,
+    newText: "",
+    newMessage: "",
     contacts: [
       {
         name: "Michele",
@@ -91,6 +93,24 @@ var app = new Vue({
   methods: {
     changeCurrentActiveElement(index) {
       this.currentActiveElement = index;
+    },
+    sendNewMessage() {
+      this.newMessage = {
+        text: this.newText,
+        status: "sent",
+      };
+      this.contacts[this.currentActiveElement].messages.push(this.newMessage);
+      this.receiveNewAnswer();
+      this.newText = "";
+    },
+    receiveNewAnswer() {
+      setTimeout(() => {
+        const answer = {
+          text: "ok",
+          status: "received",
+        };
+        this.contacts[this.currentActiveElement].messages.push(answer);
+      }, 1000);
     },
   },
 });
