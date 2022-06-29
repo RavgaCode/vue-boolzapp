@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* COMMON */
+.app-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Test */
+  background-color: aquamarine;
+}
+.app-container {
+  width: 80%;
+  height: 90%;
+  /* Test */
+  background-color: cornflowerblue;
+}
+#app {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+img {
+  border-radius: 50%;
+}
+.received {
+  background-color: white;
+  justify-self: flex-start;
+}
+.sent {
+  background-color: lightgreen;
+  margin-left: auto;
+}
+/* LEFT COL */
+.left-col {
+  width: 30%;
+  height: 100%;
+  /* Test */
+  background-color: darkturquoise;
+}
+.user-bar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* test */
+  background-color: blanchedalmond;
+}
+.profile-info {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.profile-info * {
+  margin-right: 0.5rem;
+}
+.profile-info img {
+  width: 60px;
+}
+.settings-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+}
+.settings-bar div {
+  padding: 0 0.5rem;
+}
+.notification-options {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #8edafb;
+  padding: 0 0.5rem;
+}
+.notification-options div {
+  margin-right: 0.5rem;
+}
+.notification-options h4 {
+  text-decoration: underline;
+  color: #4f7484;
+}
+.bell-icon {
+  border-radius: 50%;
+  padding: 1rem;
+  color: #8edafb;
+  background-color: white;
+  font-size: 1.3rem;
+}
+.search-bar-container {
+  height: 8%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Test */
+  background-color: darkcyan;
+}
+#search-bar {
+  width: 90%;
+  height: 60%;
+  outline: none;
+  border-style: hidden;
+}
+.contact-list {
+  width: 100%;
+  /* Test */
+  background-color: coral;
+}
+.contact-line {
+  width: 100%;
+  display: flex;
+}
+.contact-line h3 {
+  margin-top: 0.3rem;
+}
+.contact-pic {
+  height: 70px;
+  margin: 0.5rem;
+}
+/* RIGHT COL */
+.right-col {
+  width: 70%;
+  height: 100%;
+  /* Test */
+  background-color: gold;
+}
+.contact-info-bar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* test */
+  background-color: darkgrey;
+}
+.contact-profile {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.contact-profile > * {
+  margin-left: 0.5rem;
+}
+.contact-profile img {
+  height: 60px;
+}
+.contact-bar-settings {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-bar-settings > div {
+  margin-right: 0.5rem;
+}
+.message-area {
+  height: 78%;
+  width: 100%;
+  background-image: url(../img/mine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.message-line {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.message-bubble {
+  width: 35%;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.text-area {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Test */
+  background-color: lightgreen;
+}
+.input-text-container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#input-text-bar {
+  width: 80%;
+  height: 70%;
+  border-radius: 10px;
+}
+.smiley-face {
+  font-size: 30px;
+}
+.microphone-img {
+  font-size: 30px;
+}
+
+/* UTILITIES */
+.active {
+  background-color: grey;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolzap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <!-- APP WRAPPER -->
+    <div class="app-wrapper">
+        <div class="app-container">
+            <div id="app">
+                <!-- LEFT COL -->
+                <div class="left-col">
+                    <!-- USER BAR OPTIONS -->
+                    <div class="user-bar">
+                      <!-- Profile Picture and Name -->
+                      <div class="profile-info">
+                        <img src="../Milestone-1/img/avatar_io.jpg" alt="Immagine Profilo Utente">
+                        <h3>Nome Utente</h3>
+                      </div>
+                      <!-- Settings icons -->
+                      <div class="settings-bar">
+                        <div class="setting-icon"><i class="fa-solid fa-circle-notch"></i></div>
+                        <div class="setting-icon"><i class="fa-solid fa-message"></i></div>
+                        <div class="setting-icon"><i class="fa-solid fa-bell-slash"></i></div>
+                      </div>
+                    </div>
+                    <!-- NOTIFICATION OPTIONS -->
+                    <div class="notification-options">
+                      <div class="bell-icon"><i class="fa-solid fa-bell-slash"></i></div>
+                      <!-- Notification info -->
+                      <div class="notification-info">
+                        <h3>Ricevi notifiche di nuovi messagi</h3>
+                        <h4>Attiva notifiche desktop</h4>
+                      </div>
+                    </div>
+                    <!-- SEARCH BAR -->
+                    <div class="search-bar-container">
+                      <label for="search-bar"><span class="lens-icon"><i class="fa-solid fa-magnifying-glass"></i></span></label>
+                      <input @keyup ="filterContactsName()" v-model="contactFilter" type="text" id="search-bar" name="search-bar" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                    <!-- CONTACT LIST -->
+                    <div class="contact-list" >
+                      <div v-for="(contact, index) in contacts" v-if="contact.visible" class="contact-line" :class="{'active': index === currentActiveElement}" @click = 'changeCurrentActiveElement(index)' >
+                        <img class="contact-pic" :src=" `../Milestone-1/img/avatar${contacts[index].avatar}.jpg `" :alt=" `Foto contatto ${contacts[index].name}`">
+                        <h3>{{contact.name}}</h3>
+                      </div>
+                    </div>
+
+                </div>
+                <!-- RIGHT COL -->
+                <div class="right-col">
+                    <!-- CONTACT INFO BAR -->
+                    <div class="contact-info-bar">
+                      <!-- Contact Img and Name -->
+                      <div class="contact-profile">
+                        <img :src=" `../Milestone-1/img/avatar${contacts[currentActiveElement].avatar}.jpg `" alt="Foto Contatto">
+                        <div>
+                          <!-- Contact Name -->
+                          <h3>{{contacts[currentActiveElement].name}}</h3>
+                          <h4>Ultimo accesso oggi alle</h4>
+                        </div>
+                      </div>
+                      <!-- Contact-bar-settings -->
+                      <div class="contact-bar-settings">
+                        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div><i class="fa-solid fa-paperclip"></i></div>
+                        <div><i class="fa-solid fa-bell-slash"></i></div>
+                      </div>
+
+                    </div>
+                    <!-- MESSAGE AREA -->
+                    <div class="message-area">
+                      <!-- Message Line -->
+                      <div class="message-line" v-for="(message, index) in contacts[currentActiveElement].messages">
+                        <!-- Message bubble -->
+                        <div class="message-bubble" 
+                          :class="{'sent': message.status === 'sent', 'received' : message.status === 'received'}"
+                          >
+                          <span>{{message.text}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TEXT AREA -->
+                    <div class="text-area">
+                      <!-- Smiley face -->
+                      <div class="smiley-face"><i class="fa-solid fa-face-smile"></i></div>
+                      <!-- Input message -->
+                      <div class="input-text-container">
+                        <label for="input-text-bar"></label>
+                        <input v-model="newText" @keyup.enter="sendNewMessage()" id="input-text-bar" type="text" placeholder="Scrivi un messaggio">
+                      </div>
+                      <!-- Microphone img -->
+                      <div class="microphone-img"><i class="fa-solid fa-microphone"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
