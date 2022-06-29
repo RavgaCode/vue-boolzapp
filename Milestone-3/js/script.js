@@ -100,10 +100,10 @@ var app = new Vue({
         status: "sent",
       };
       this.contacts[this.currentActiveElement].messages.push(this.newMessage);
-      this.receiveStandardAnswer();
+      this.receiveNewAnswer();
       this.newText = "";
     },
-    receiveStandardAnswer() {
+    receiveNewAnswer() {
       setTimeout(() => {
         const answer = {
           text: "ok",
