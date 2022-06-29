@@ -85,8 +85,10 @@
                       <!-- Message Line -->
                       <div class="message-line" v-for="(message, index) in contacts[currentActiveElement].messages">
                         <!-- Message bubble -->
-                        <div class="message-bubble">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora sint culpa consequuntur ipsam molestiae vero laboriosam magnam dignissimos ex veniam assumenda aut laborum doloribus doloremque, eos odit sit quis perferendis.
+                        <div class="message-bubble" 
+                          :class="{'sent': message.status === 'sent', 'received' : message.status === 'received'}"
+                          >
+                          <span>{{message.text}}</span>
                         </div>
                       </div>
                     </div>
