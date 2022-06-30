@@ -9,14 +9,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Test */
-  background-color: aquamarine;
+  background-color: #009588;
 }
 .app-container {
   width: 80%;
   height: 90%;
-  /* Test */
-  background-color: cornflowerblue;
 }
 #app {
   display: flex;
@@ -38,8 +35,8 @@ img {
 .left-col {
   width: 30%;
   height: 100%;
-  /* Test */
-  background-color: darkturquoise;
+  display: flex;
+  flex-direction: column;
 }
 .user-bar {
   height: 10%;
@@ -47,8 +44,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* test */
-  background-color: blanchedalmond;
+  background-color: #eaeaea;
+  border-right: 1px solid darkgray;
 }
 .profile-info {
   width: 50%;
@@ -67,6 +64,7 @@ img {
   align-items: center;
   justify-content: flex-end;
   width: 50%;
+  color: #b1b1b1;
 }
 .settings-bar div {
   padding: 0 0.5rem;
@@ -99,8 +97,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Test */
-  background-color: darkcyan;
+  background-color: #fafafa;
 }
 #search-bar {
   width: 90%;
@@ -110,12 +107,17 @@ img {
 }
 .contact-list {
   width: 100%;
-  /* Test */
-  background-color: coral;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.contact-list:last-child {
+  flex-grow: 1;
 }
 .contact-line {
   width: 100%;
   display: flex;
+  border-bottom: 1px solid darkgray;
 }
 .contact-line h3 {
   margin-top: 0.3rem;
@@ -128,8 +130,6 @@ img {
 .right-col {
   width: 70%;
   height: 100%;
-  /* Test */
-  background-color: gold;
 }
 .contact-info-bar {
   height: 10%;
@@ -137,8 +137,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* test */
-  background-color: darkgrey;
+  background-color: #eaeaea;
 }
 .contact-profile {
   width: 50%;
@@ -148,6 +147,9 @@ img {
 .contact-profile > * {
   margin-left: 0.5rem;
 }
+.contact-profile h4 {
+  color: #b1b1b1;
+}
 .contact-profile img {
   height: 60px;
 }
@@ -155,6 +157,7 @@ img {
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  color: #b1b1b1;
 }
 .contact-bar-settings > div {
   margin-right: 0.5rem;
@@ -165,6 +168,7 @@ img {
   background-image: url(../img/mine.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .message-line {
   display: flex;
@@ -174,8 +178,16 @@ img {
 }
 .message-bubble {
   width: 35%;
-  padding: 0.5rem;
+  padding: 1.2rem;
   border-radius: 10px;
+  position: relative;
+}
+.message-date {
+  font-size: 10px;
+  color: #b1b1b1;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 .text-area {
   height: 12%;
@@ -183,8 +195,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Test */
-  background-color: lightgreen;
+  background-color: #eaeaea;
+  color: #b1b1b1;
 }
 .input-text-container {
   width: 85%;
@@ -204,8 +216,15 @@ img {
 .microphone-img {
   font-size: 30px;
 }
-
 /* UTILITIES */
 .active {
   background-color: grey;
+}
+.received {
+  background-color: white;
+  justify-self: flex-start;
+}
+.sent {
+  background-color: #d5f9ba;
+  margin-left: auto;
 }

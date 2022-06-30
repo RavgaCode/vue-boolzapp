@@ -98,6 +98,7 @@ var app = new Vue({
       this.newMessage = {
         text: this.newText,
         status: "sent",
+        date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
       };
       this.contacts[this.currentActiveElement].messages.push(this.newMessage);
       this.receiveNewAnswer();
@@ -108,6 +109,7 @@ var app = new Vue({
         const answer = {
           text: "ok",
           status: "received",
+          date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
         };
         this.contacts[this.currentActiveElement].messages.push(answer);
       }, 1000);
